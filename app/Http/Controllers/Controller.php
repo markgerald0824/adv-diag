@@ -16,7 +16,7 @@ class Controller extends BaseController
      * @description Get Shop Id
      */
     public function userId() {
-        return Auth::user()->name;
+        return Auth::user()->id;
     }
 
     /**
