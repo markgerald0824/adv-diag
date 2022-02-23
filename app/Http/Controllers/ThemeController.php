@@ -10,7 +10,7 @@ class ThemeController extends Controller
     public function listThemes() {
         $shop = Auth::user();
         $apiVersion = $this->appConfig( 'api_version' );
-        $themeUrl = "admin/api/{$apiVersion}/themes.json";
+        $themeUrl = "/admin/api/{$apiVersion}/themes.json";
         $request = $shop->api()->rest( 'GET', $themeUrl );
         $themes = [];
 
