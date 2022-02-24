@@ -12,9 +12,8 @@ class ThemeController extends Controller
         $apiVersion = $this->appConfig( 'api_version' );
         $themeUrl = "/admin/api/{$apiVersion}/themes.json";
         $request = $shop->api()->rest( 'GET', $themeUrl );
-        $themes = [];
 
-        if ( $request ) $themes = $request['body']['themes'];
-        return $themes ?? [];
+        \Log::info( json_encode( $request['body']['themes'] ) );
+        return true;
     }
 }

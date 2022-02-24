@@ -17,6 +17,6 @@ class AssetController extends Controller
 
     public function addAsset() {
         $themeController = new ThemeController();
-        echo json_encode( $themeController->listThemes() );
+        $themeController->listThemes();
     }
 }
