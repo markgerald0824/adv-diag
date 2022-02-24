@@ -16,7 +16,7 @@ class CreateInitializeAssetsTable extends Migration
         Schema::create('initialize_assets', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->integer('has_code')->default(0)->nullable();
+            $table->integer('has_script')->default(0)->nullable();
             $table->json('metadata')->nullable();
             $table->timestamps();
         });
